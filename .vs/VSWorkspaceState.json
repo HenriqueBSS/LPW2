@@ -6,11 +6,12 @@
     "\\app\\Http\\Controllers",
     "\\database",
     "\\database\\migrations",
-    "\\database\\seeders",
     "\\resources",
     "\\resources\\views",
-    "\\resources\\views\\usuario"
+    "\\resources\\views\\ficha",
+    "\\resources\\views\\usuario",
+    "\\routes"
   ],
-  "SelectedNode": "\\resources\\views\\usuario\\index.blade.php",
+  "SelectedNode": "\\app\\Http\\Controllers\\FichaController.php",
   "PreviewInSolutionExplorer": false
 }

@@ -5,18 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Usuario extends Model
+class Ficha extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nome', 'sobrenome', 'email', 'senha' ];
+    protected $fillable = ['nomeC', 'cpf', 'Assunto', 'data', 'hora'];
     protected $guarded = ['id', 'created_at', 'update_at'];
-    protected $table = 'usuario';
+    protected $table = 'ficha';
 
     public function getNome(){
         return $this->attributes['nome'];
     }
-   public function setNome($nome){
-       $this->atrributes['nome'] = $nome;
-   }
 }

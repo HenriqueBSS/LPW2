@@ -13,11 +13,12 @@
                     <div class= "navbar-menu">
                         <div class= "navbar-end">
                             <a href="{{ route('usuario.create')}}" class= "navbar-item">Cadastrar</a>
-                            <a class= "navbar-item">Login</a>
+                            <a href="{{ route('ficha.index')}}" class= "navbar-item">Login</a>
                         </div>
                     </div>
                 </div>
             </nav>
+
             <div class= "hero-body">
                 <div class= "conteiner has-text-centered">
                     <h1 class = "title">
@@ -28,6 +29,7 @@
                     </h3>
                 </div>
             </div>
+
         </div>
     </section>
     <section class = "hero-body">

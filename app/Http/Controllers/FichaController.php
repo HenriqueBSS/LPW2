@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Usuario;
+use App\Models\Ficha;
 use Illuminate\Http\Request;
 
-
-class UsuarioController extends Controller
+class FichaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-       
-        return view('usuario.index');
+        
+        return view('ficha.index');
     }
 
     /**
@@ -26,7 +25,7 @@ class UsuarioController extends Controller
      */
     public function create()
     {
-       return view('usuario.create');
+        return view('ficha.create');
     }
 
     /**
@@ -37,61 +36,55 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-      //  $this->usuario->create($request->all());
+      // $ficha = Post::create($request->all());
+
+       return redirect()->route('ficha.index');
+
        
-      //$usuario = Post::create($request->all());
-
-      return view('inicio');
-      //return redirect()->route('usuario.index');
-
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Usuario  $usuario
+     * @param  \App\Models\Ficha  $ficha
      * @return \Illuminate\Http\Response
      */
-    public function show(Usuario $usuario)
+    public function show(Ficha $ficha)
     {
-        return view('usuario.show', ['usuario' => $usuario]);
+        return view('ficha.show', ['ficha' => $ficha]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Usuario  $usuario
+     * @param  \App\Models\Ficha  $ficha
      * @return \Illuminate\Http\Response
      */
-    public function edit(Usuario $usuario)
+    public function edit(Ficha $ficha)
     {
-        $this->usuario = $usuario;
-        return view('usuario.edit',compact('usuario'));
-
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Usuario  $usuario
+     * @param  \App\Models\Ficha  $ficha
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Usuario $usuario)
+    public function update(Request $request, Ficha $ficha)
     {
-        $usuario->update($request-all());
-        return redirect()->route('usuario.index');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Usuario  $usuario
+     * @param  \App\Models\Ficha  $ficha
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Usuario $usuario)
+    public function destroy(Ficha $ficha)
     {
-        $usuario->delete();
-        return redirect()->route('usuario.index');
+        //
     }
 }
